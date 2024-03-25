@@ -1,0 +1,71 @@
+.box-main {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.auto-center {
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.content-main {
+    padding-right: 30px;
+}
+
+.my-input {
+    position: relative;
+    display: inline-block;
+}
+
+.my-input-tips-wrap {
+    color: rgb(255, 52, 52);
+    position: absolute;
+    left: 10px;
+    bottom: 50px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    background-color: white;
+    width: auto;
+    height: 50px;
+}
+
+.my-input-tips {
+    position: relative;
+    top: 10px;
+    margin: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    font-size: large;
+    white-space: nowrap;
+}
+
+.my-input-arrow {
+    position: absolute;
+    left: 5px;
+    top: 49px;
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: gray transparent transparent transparent;
+}
+
+.hide {
+    display: none;
+}
+
+input {
+    line-height: normal;
+}
+
+select {
+    height: auto !important;
+}
+
+.quote {
+    margin-top: 30px;
+    text-align: center;
+}
