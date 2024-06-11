@@ -3,17 +3,23 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
     <title>MobaXterm Keygen</title>
 
+    <!-- SEO meta tags -->
+    <meta name="description" content="Website created with love by Zarfala" />
+
     <!-- Favicon -->
-    <link rel="icon" href="https://i.imgur.com/FtcF9ZP.png">
+    <link rel="icon" href="https://i.imgur.com/FtcF9ZP.png" />
 
     <!-- CSS -->
-    <link href="./css/pure-min.css?=1.1" rel="stylesheet">
-    <link href="./css/style.css?=1.1" rel="stylesheet">
-    <link href="./css/fire.css?=1.1" rel="stylesheet">
+    <link href="./css/pure-min.css?=1.0" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/fire.css" rel="stylesheet" />
 
     <!-- JS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,11 +31,11 @@
     </script>
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="MobaXterm Keygen">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Website created with love by Zarfala">
-    <meta property="og:image" content="https://i.imgur.com/FtcF9ZP.png">
-    <meta property="og:site_name" content="MobaXterm Keygen">
+    <meta property="og:title" content="MobaXterm Keygen" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Website created with love by Zarfala" />
+    <meta property="og:image" content="https://i.imgur.com/FtcF9ZP.png" />
+    <meta property="og:site_name" content="MobaXterm Keygen" />
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
@@ -40,49 +46,75 @@
 
 <body class="transition-colors dark">
     <main>
-        <div class="relative flex flex-col min-h-screen items-center justify-center bg-white dark:bg-black transition-colors">
-            <div class="box-main p-4 md:p-8">
-                <div id="app" class="mx-auto max-w-xl w-full text-center shadow-xl sm:rounded-xl bg-white dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
+        <div
+            class="relative flex flex-col h-[100vh] items-center justify-center bg-white dark:bg-black transition-colors inset-0 overflow-hidden">
+            <div class="flex inset-0 overflow-hidden">
+                <div class="jumbo absolute -inset-[10px] opacity-50"></div>
+            </div>
+            <div class="box-main">
+
+                <div id="app"
+                    class="inset-0 overflow-hidden p-8 max-w-lg w-full text-center shadow-xl sm:rounded-xl bg-white dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
                     <div class="content">
                         <div class="pure-form pure-form-aligned auto-center">
                             <fieldset>
                                 <legend>
-                                    <h1 class="relative flex items-center text-5xl font-bold text-gray-800 dark:text-white dark:opacity-95 transition-colors">
+                                    <h1
+                                        class="relative flex items-center text-5xl font-bold text-gray-800 dark:text-white dark:opacity-95 transition-colors">
                                         MobaXterm
                                         <span class="ml-1 rounded-xl bg-current p-2 text-[0.7em] leading-none">
                                             <span class="text-white dark:text-black">Keygen</span>
                                         </span>
                                     </h1>
                                     <div class="mt-4">
-                                        <button onclick="toggleTheme()" class="px-3 py-1 border border-stone-200 rounded-full drop-shadow-sm text-sm text-stone-800 dark:text-white bg-white/40 dark:bg-black/40 backdrop-blur-lg hover:border-stone-300 transition-colors dark:border-stone-500 dark:hover:border-stone-400">Toggle Theme</button>
+                                        <button onclick="toggleTheme()"
+                                            class="px-3 py-1 border border-stone-200 rounded-full drop-shadow-sm text-sm text-stone-800 dark:text-white bg-white/40 dark:bg-black/40 backdrop-blur-lg hover:border-stone-300 transition-colors dark:border-stone-500 dark:hover:border-stone-400">Toggle
+                                            Theme</button>
                                     </div>
                                 </legend>
 
                                 <div class="pure-g">
                                     <div class="mt-4 pure-control-group pure-u-1">
-                                        <label for="licenseType" class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Edition：</label>
+                                        <label for="licenseType"
+                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Edition：</label>
                                         <select name="licenseType" id="licenseType" v-model="licenseType" class="pure-input-1-2">>
                                             <option v-for="(val, key) in LICENSE_TYPES" :value="val">{{key}}</option>
                                         </select>
                                     </div>
 
                                     <div class="pure-control-group pure-u-1">
-                                        <label for="userName" class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Username：</label>
-                                        <my-input :idattr="'userName'" :validation="'^[a-zA-Z]+$'" :valueattr="userName" :validationtips="'Only letters can be used'" :placeholderattr="'Example defaultUser'" @set-data="setUserName"></my-input>
+                                        <label for="userName"
+                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Username：</label>
+                                        <my-input :idattr="'userName'" :validation="'^[a-zA-Z]+$'" :valueattr="userName"
+                                            :validationtips="'Only letters can be used'"
+                                            :placeholderattr="'Example defaultUser'" @set-data="setUserName">
+                                        </my-input>
                                     </div>
 
                                     <div class="pure-control-group pure-u-1">
-                                        <label for="versionName" class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Version：</label>
-                                        <my-input :idattr="'versionName'" :validation="'^[1-9][0-9]*\\.?\\d{0,1}$'" :validationtips="'Fractions with only 1 digit after the decimal point'" :valueattr="versionName" :placeholderattr="'Example 21.0'" @set-data="setVersionName"></my-input>
+                                        <label for="versionName"
+                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Version：</label>
+                                        <my-input :idattr="'versionName'" :validation="'^[1-9][0-9]*\\.?\\d{0,1}$'"
+                                            :validationtips="'Fractions with only 1 digit after the decimal point'"
+                                            :valueattr="versionName" :placeholderattr="'Example 21.0'"
+                                            @set-data="setVersionName"></my-input>
                                     </div>
 
                                     <div class="pure-control-group pure-u-1">
-                                        <label for="userNum" class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Number of users：</label>
-                                        <my-input :idattr="'userNum'" :validation="'^[1-9]+\\d*$'" :valueattr="userNum" :placeholderattr="'Example 1'" :validationtips="'Numbers with a minimum value of 1'" @set-data="setUserNum"></my-input>
+                                        <label for="userNum"
+                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Number
+                                            of users：</label>
+                                        <my-input :idattr="'userNum'" :validation="'^[1-9]+\\d*$'" :valueattr="userNum"
+                                            :placeholderattr="'Example 1'"
+                                            :validationtips="'Numbers with a minimum value of 1'"
+                                            @set-data="setUserNum">
+                                        </my-input>
                                     </div>
 
                                     <div class="m-8 max-w-lg w-full mx-auto flex justify-center text-center">
-                                        <button type="submit" style="letter-spacing: normal !important;" class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400" @click.stop="generate">Download key</button>
+                                        <button type="submit" style="letter-spacing: normal !important;"
+                                            class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400"
+                                            @click.stop="generate">Download key</button>
                                     </div>
                                 </div>
                                 <p class="text-center text-gray-500 text-xs">
