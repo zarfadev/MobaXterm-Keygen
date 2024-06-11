@@ -459,8 +459,8 @@ html {
     border-width: 1px;
     border-radius: .5rem;
     box-sizing: border-box;
-    border-color: rgb(209 213 219 / 1);
-    background-color: #f9fafb;
+    border-color: #ccc;
+    background-color: #fff;
 }
 
 .pure-form input[type=color] {
