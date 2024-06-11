@@ -189,7 +189,8 @@
             components: {
                 'my-input': {
                     template: `<div class="my-input">
-                                    <input :id="idattr" :placeholder="placeholderattr" v-model="value" required/>
+                                    <input :id="idattr" :placeholder="placeholderattr" v-model="value" required
+                                           class="block w-full mt-1 text-gray-900 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
                                     <div :class="validationTipsDiplay" class="my-input-tips-wrap">
                                         <span class="my-input-tips">{{validationtips}}</span>
                                         <div class="my-input-arrow"></div>
@@ -234,8 +235,12 @@
                 }
             }
         });
-    </script>
 
+        function toggleTheme() {
+            const html = document.querySelector('html');
+            html.classList.toggle('dark');
+        }
+    </script>
 </body>
 
 </html>
