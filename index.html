@@ -177,20 +177,65 @@
                     let licenseStr = generateLicense(this.licenseType, this.userName, this.userNum, majorVersion, minorVersion);
                     this.generateLicenseFile(licenseStr);
                 },
-                async generateLicenseFile(content) {
-                    const zip = new JSZip();
-                    zip.file('Custom.mxtpro', content);
-                    const blob = await zip.generateAsync({ type: 'blob' });
-                    saveAs(blob, 'Custom.mxtpro.zip');
+                generateLicenseFile(licenseStr) {
+                    let zip = new JSZip();
+                    zip.file("Pro.key", licenseStr);
+                    zip.generateAsync({ type: "blob" })
+                        .then(function (content) {
+                            saveAs(content, "Custom.mxtpro");
+                        });
+                }
+            },
+            components: {
+                'my-input': {
+                    template: `<div class="my-input">
+                                    <input :id="idattr" :placeholder="placeholderattr" v-model="value" required/>
+                                    <div :class="validationTipsDiplay" class="my-input-tips-wrap">
+                                        <span class="my-input-tips">{{validationtips}}</span>
+                                        <div class="my-input-arrow"></div>
+                                    </div>
+                                </div>`,
+                    data() {
+                        return {
+                            value: this.valueattr,
+                            validationTipsDiplay: 'hide',
+                            tipsDisplayTimeout: undefined
+                        }
+                    },
+                    props: {
+                        idattr: { type: String, default: '' },
+                        placeholderattr: { type: String, default: '' },
+                        valueattr: '',
+                        validation: { type: String, default: '' },
+                        validationtips: ''
+                    },
+                    watch: {
+                        valueattr(newVal, oldVal) {
+                            this.value = newVal
+                        },
+                        value(newVal, oldVal) {
+                            if (newVal && this.validation) {
+                                let reg = new RegExp(this.validation);
+                                if (!reg.test(newVal)) {
+                                    this.validationTipsDiplay = '';
+                                    this.value = oldVal;
+                                    if (this.tipsDisplayTimeout) clearTimeout(this.tipsDisplayTimeout);
+                                    var _this = this;
+                                    this.tipsDisplayTimeout = setTimeout(function () {
+                                        _this.tipsDisplayTimeout = undefined;
+                                        _this.validationTipsDiplay = 'hide';
+                                    }, 1000);
+                                    return;
+                                }
+                            }
+                            this.$emit('set-data', newVal);
+                        }
+                    }
                 }
             }
         });
-
-        function toggleTheme() {
-            const html = document.querySelector('html');
-            html.classList.toggle('dark');
-        }
     </script>
+
 </body>
 
 </html>
