@@ -17,11 +17,11 @@
     <link rel="icon" href="https://i.imgur.com/FtcF9ZP.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link href="./css/pure-min.css?=1.0" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     <link href="./css/fire.css" rel="stylesheet" />
 
-    <!-- Tailwind CSS -->
+    <!-- JS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -76,16 +76,15 @@
                                 <div class="pure-g">
                                     <div class="mt-4 pure-control-group pure-u-1">
                                         <label for="licenseType"
-                                            class="block text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Edition：</label>
-                                        <select name="licenseType" id="licenseType" v-model="licenseType"
-                                            class="block w-full mt-1 text-gray-900 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Edition：</label>
+                                        <select name="licenseType" id="licenseType" v-model="licenseType">
                                             <option v-for="(val, key) in LICENSE_TYPES" :value="val">{{key}}</option>
                                         </select>
                                     </div>
 
                                     <div class="pure-control-group pure-u-1">
                                         <label for="userName"
-                                            class="block text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Username：</label>
+                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Username：</label>
                                         <my-input :idattr="'userName'" :validation="'^[a-zA-Z]+$'" :valueattr="userName"
                                             :validationtips="'Only letters can be used'"
                                             :placeholderattr="'Example defaultUser'" @set-data="setUserName">
@@ -94,7 +93,7 @@
 
                                     <div class="pure-control-group pure-u-1">
                                         <label for="versionName"
-                                            class="block text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Version：</label>
+                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Version：</label>
                                         <my-input :idattr="'versionName'" :validation="'^[1-9][0-9]*\\.?\\d{0,1}$'"
                                             :validationtips="'Fractions with only 1 digit after the decimal point'"
                                             :valueattr="versionName" :placeholderattr="'Example 21.0'"
@@ -103,7 +102,7 @@
 
                                     <div class="pure-control-group pure-u-1">
                                         <label for="userNum"
-                                            class="block text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Number
+                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Number
                                             of users：</label>
                                         <my-input :idattr="'userNum'" :validation="'^[1-9]+\\d*$'" :valueattr="userNum"
                                             :placeholderattr="'Example 1'"
@@ -114,7 +113,7 @@
 
                                     <div class="m-8 max-w-lg w-full mx-auto flex justify-center text-center">
                                         <button type="submit"
-                                            class="bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400"
+                                            class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400"
                                             @click.stop="generate">Download key</button>
                                     </div>
                                 </div>
@@ -189,8 +188,7 @@
             components: {
                 'my-input': {
                     template: `<div class="my-input">
-                                    <input :id="idattr" :placeholder="placeholderattr" v-model="value" required
-                                           class="block w-full mt-1 text-gray-900 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
+                                    <input :id="idattr" :placeholder="placeholderattr" v-model="value" required/>
                                     <div :class="validationTipsDiplay" class="my-input-tips-wrap">
                                         <span class="my-input-tips">{{validationtips}}</span>
                                         <div class="my-input-arrow"></div>
@@ -235,12 +233,8 @@
                 }
             }
         });
-
-        function toggleTheme() {
-            const html = document.querySelector('html');
-            html.classList.toggle('dark');
-        }
     </script>
+
 </body>
 
 </html>
