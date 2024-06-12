@@ -11,7 +11,8 @@ This guide provides instructions for generating an activation key for MobaXterm,
 
 2. **Integration**: Insert the generated activation file into the root directory of the MobaXterm portable version.
 
-3. **Move Custom Configuration File**: Move the file named `Custom.mxtpro` to the following directory: `C:\Program Files (x86)\Mobatek\MobaXterm`.
+### Additional Step
+- **Configuration (Activation)**: Move the file named `Custom.mxtpro` to the following directory: `C:\Program Files (x86)\Mobatek\MobaXterm`.
 
 ### Usage
 - Launch MobaXterm and follow the prompts to activate the software using the generated key.
