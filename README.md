@@ -1,4 +1,4 @@
-## MobaXterm Key Generation
+## MobaXterm Key Generation -> Please star 🌟
 
 ### Overview
 This guide provides instructions for generating an activation key for MobaXterm, a comprehensive terminal emulator for Windows equipped with an X11 server, SSH client, and an array of network tools.
