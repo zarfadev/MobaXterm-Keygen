@@ -196,13 +196,13 @@
             },
             components: {
                 'my-input': {
-                    template: <div class="my-input">
+                    template: `<div class="my-input">
                                     <input :id="idattr" :placeholder="placeholderattr" v-model="value" required/>
                                     <div :class="validationTipsDiplay" class="my-input-tips-wrap">
                                         <span class="my-input-tips">{{validationtips}}</span>
                                         <div class="my-input-arrow"></div>
                                     </div>
-                                </div>,
+                                </div>`,
                     data() {
                         return {
                             value: this.valueattr,
