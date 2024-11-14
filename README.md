@@ -10,16 +10,12 @@ This guide provides easy-to-follow instructions for generating an activation key
 
 1. **Generate Activation File**: Go to the [MobaXterm Key Generator](https://moba-xterm-keygen.vercel.app/) and generate your activation file in seconds.
 
-   ![MobaXterm Key Generator Example](https://kybio.co/uploads/files/e4b8720c06bcac06acca3a11354abf14.png)
+   ![MobaXterm Key Generator Example](https://i.imgur.com/qUI3zaa.png)
    
 2. **Integration**: Place the generated activation file into the root folder of your MobaXterm directory. (You can find this by right-clicking the MobaXterm icon and selecting "Open file location").
 
-   ![Root Directory Example](https://kybio.co/uploads/files/548977dd269e1cc272a767941065d5aa.png)
-
 ### Additional Step
 - **Configuration (Activation)**: Move the file named `Custom.mxtpro` to the following directory: `C:\Program Files (x86)\Mobatek\MobaXterm`.
-
-   ![Folder Example](https://kybio.co/uploads/files/4a8d3dfe4fdef2f6ecd9730eb4a6395e.png)
 
 ### FAQ (Frequently Asked Questions)
 1. **Where can I find the MobaXterm root directory?**
