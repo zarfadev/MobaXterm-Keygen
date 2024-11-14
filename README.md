@@ -1,7 +1,8 @@
 ## MobaXterm Key Generation -> Please star 🌟
 
 ### Overview
-This guide provides easy-to-follow instructions for generating an activation key for MobaXterm, the ultimate terminal emulator for Windows that includes an X11 server, SSH client, and a comprehensive set of network tools. **This method works for any version 20.0 and above**.
+This guide provides easy-to-follow instructions for generating an activation key for MobaXterm, the ultimate terminal emulator for Windows that includes an X11 server, SSH client, and a comprehensive set of network tools. **This method works for any version 20.0 and above**.  
+**Current Version:** 24.3
 
 ### Prerequisites
 - **Download MobaXterm**: Get MobaXterm from the [official website](https://mobaxterm.mobatek.net/download-home-edition.html).
@@ -12,19 +13,23 @@ This guide provides easy-to-follow instructions for generating an activation key
 
    ![MobaXterm Key Generator Example](https://i.imgur.com/qUI3zaa.png)
    
-2. **Integration**: Place the generated activation file into the root folder of your MobaXterm directory. (You can find this by right-clicking the MobaXterm icon and selecting "Open file location").
+2. **Integration**: Place the generated activation file into the MobaXterm directory:
+   - **Default Path**: `C:\Program Files (x86)\Mobatek\MobaXterm`
+   - To find this manually, right-click the MobaXterm icon on your desktop or start menu and select **"Open file location"**.  
+   *(Tip: You can copy the above path and paste it into your File Explorer's address bar to go directly to the folder).*
 
 ### Additional Step
-- **Configuration (Activation)**: Move the file named `Custom.mxtpro` to the following directory: `C:\Program Files (x86)\Mobatek\MobaXterm`.
+- **Configuration (Activation)**: Move the file named `Custom.mxtpro` to the MobaXterm installation directory:  
+  `C:\Program Files (x86)\Mobatek\MobaXterm`
 
 ### FAQ (Frequently Asked Questions)
-1. **Where can I find the MobaXterm root directory?**
-   - Right-click the MobaXterm icon on your desktop or start menu and select "Open file location."
+1. **Where can I find the MobaXterm root directory?**  
+   - Right-click the MobaXterm icon on your desktop or in the start menu, then select **"Open file location"**.
 
-2. **What if the activation file doesn't work?**
-   - Make sure you're using version 20.0 or above and that the file is in the correct location.
+2. **What if the activation file doesn't work?**  
+   - Ensure you’re using version 20.0 or above and that the file is in the correct location (`C:\Program Files (x86)\Mobatek\MobaXterm`).
 
-3. **Can I use this guide for both the portable and installer versions?**
+3. **Can I use this guide for both the portable and installer versions?**  
    - Yes! This method works for any version 20.0 and above, including both portable and installer editions.
 
 ### Disclaimer
