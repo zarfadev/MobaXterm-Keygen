@@ -88,8 +88,8 @@
                                     <div class="pure-control-group pure-u-1">
                                         <label for="userName"
                                             class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Username：</label>
-                                        <my-input :idattr="'userName'" :validation="'^[a-zA-Z]+$'" :valueattr="userName"
-                                            :validationtips="'Only letters can be used'"
+                                        <my-input :idattr="'userName'" :validation="'^[a-zA-Z0-9]+$'" :valueattr="userName"
+                                            :validationtips="'Only letters and digits can be used'"
                                             :placeholderattr="'Example defaultUser'" @set-data="setUserName">
                                         </my-input>
                                     </div>
