@@ -152,7 +152,7 @@
             validateVersion() {
               const regex = /^[1-9][0-9]*\.?\d{0,1}$/;
               if (!regex.test(this.versionName)) {
-                this.errors.versionName = 'Enter a valid version (e.g., 24.3)';
+                this.errors.versionName = 'Enter a valid version (e.g., 24.4)';
                 return false;
               }
               this.errors.versionName = '';
