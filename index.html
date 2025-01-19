@@ -1,244 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- Required meta tags -->
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Title -->
     <title>MobaXterm Keygen</title>
-
-    <!-- SEO meta tags -->
     <meta name="description" content="Website created with love by Zarfala" />
-
-    <!-- Favicon -->
     <link rel="icon" href="https://i.imgur.com/FtcF9ZP.png" />
-
-    <!-- CSS -->
     <link href="./css/pure-min.css?=2" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     <link href="./css/fire.css" rel="stylesheet" />
-
-    <!-- JS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script>
-        tailwind.config = {
-            darkMode: "class",
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            screens: {
+              'xs': '475px',
+            }
+          }
         }
+      }
     </script>
-
-    <!-- Open Graph data -->
+    <!-- Meta tags moved together for better organization -->
     <meta property="og:title" content="MobaXterm Keygen" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Website created with love by Zarfala" />
     <meta property="og:image" content="https://i.imgur.com/FtcF9ZP.png" />
     <meta property="og:site_name" content="MobaXterm Keygen" />
-
-    <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="MobaXterm Keygen">
     <meta name="twitter:description" content="Website created with love by Zarfala">
     <meta name="twitter:image" content="https://i.imgur.com/FtcF9ZP.png">
-</head>
-
-<body class="transition-colors">
+  </head>
+  <body class="transition-colors">
     <main>
-        <div class="relative flex flex-col h-[100vh] items-center justify-center bg-white dark:bg-black transition-colors inset-0 overflow-hidden">
-            <div class="flex inset-0 overflow-hidden">
-                <div class="jumbo absolute opacity-60"></div>
-            </div>
-            <div class="box-main">
-                <div id="app"
-                    class="inset-0 overflow-hidden p-8 max-w-lg w-full text-center shadow-xl sm:rounded-xl bg-white dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
-                    <div class="content">
-                        <div class="pure-form pure-form-aligned auto-center">
-                            <fieldset>
-                                <legend>
-                                    <h1
-                                        class="relative flex items-center text-5xl font-bold text-gray-800 dark:text-white dark:opacity-95 transition-colors">
-                                        MobaXterm
-                                        <span class="ml-1 rounded-xl bg-current p-2 text-[0.7em] leading-none">
-                                            <span class="text-white dark:text-black">Keygen</span>
-                                        </span>
-                                    </h1>
-                                    <!-- Badge de versión 
-                                    <div class="mt-2 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-500 text-white dark:bg-blue-700">
-                                        Current version 24.3
-                                    </div> -->
-                                    <div class="mt-4">
-                                        <button onclick="toggleTheme()"
-                                            class="px-3 py-1 border border-stone-200 rounded-full drop-shadow-sm text-sm text-stone-800 dark:text-white bg-white/40 dark:bg-black/40 backdrop-blur-lg hover:border-stone-300 transition-colors dark:border-stone-500 dark:hover:border-stone-400">Toggle
-                                            Theme</button>
-                                    </div>
-                                </legend>
-
-                                <div class="mt-2 pure-g">
-                                    <div class="mt-4 pure-control-group pure-u-1">
-                                        <label for="licenseType"
-                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Edition：</label>
-                                        <select name="licenseType" id="licenseType" v-model="licenseType" class="pure-input-1-2">
-                                            <option value="" disabled>Select an option</option>
-                                            <option v-for="(val, key) in LICENSE_TYPES" :value="val">{{key}}</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="pure-control-group pure-u-1">
-                                        <label for="userName"
-                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Username：</label>
-                                        <my-input :idattr="'userName'" :validation="'^[a-zA-Z]+$'" :valueattr="userName"
-                                            :validationtips="'Only letters can be used'"
-                                            :placeholderattr="'Example defaultUser'" @set-data="setUserName">
-                                        </my-input>
-                                    </div>
-
-                                    <div class="pure-control-group pure-u-1">
-                                        <label for="versionName"
-                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Version：</label>
-                                        <my-input :idattr="'versionName'" :validation="'^[1-9][0-9]*\\.?\\d{0,1}$'"
-                                            :validationtips="'Fractions with only 1 digit after the decimal point'"
-                                            :valueattr="versionName" :placeholderattr="'Example 24.3'"
-                                            @set-data="setVersionName"></my-input>
-                                    </div>
-
-                                    <div class="pure-control-group pure-u-1">
-                                        <label for="userNum"
-                                            class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">Number
-                                            of users：</label>
-                                        <my-input :idattr="'userNum'" :validation="'^[1-9]+\\d*$'" :valueattr="userNum"
-                                            :placeholderattr="'Example 1'"
-                                            :validationtips="'Numbers with a minimum value of 1'"
-                                            @set-data="setUserNum">
-                                        </my-input>
-                                    </div>
-
-                                    <div class="m-8 max-w-lg w-full mx-auto flex justify-center text-center">
-                                        <button type="submit" style="letter-spacing: normal !important;"
-                                            class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400"
-                                            @click.stop="generate">Download key</button>
-                                    </div>
-                                </div>
-                                <div class="mt-6 text-xs text-slate-600 dark:text-slate-400 flex flex-col items-center">
-                                    <p>Created with ❤ by Zarfala.</p>
-                                </div>
-                                <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">UI/UX Design created for <span class="text-blue-500 font-semibold">Computer</span></p>
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="relative flex min-h-screen flex-col items-center justify-center bg-white dark:bg-black transition-colors overflow-hidden px-4">
+        <!-- Background effect -->
+        <div class="flex inset-0 overflow-hidden">
+          <div class="jumbo absolute opacity-60"></div>
         </div>
-    </main>
-
-    <!-- JS -->
-    <script src="./js/vue.min-2.6.12.js"></script>
-    <script src="./js/FileSaver.js"></script>
-    <script src="./js/jszip.js"></script>
-    <script src="./js/fire.js"></script>
-    <script src="./js/alert.js"></script>
-
-    <script type="module">
-        import { LicenseType, generateLicense } from './js/mobaXtermGenerater.js'
-
-        var app = new Vue({
-            el: '#app',
-            data() {
-                return {
-                    LICENSE_TYPES: LicenseType,
-
-                    licenseType: 1,
-                    userName: 'defaultUser',
-                    versionName: '24.3',
-                    userNum: 1,
-                }
-            },
-            methods: {
-                setUserName(newVal) {
-                    this.userName = newVal;
-                },
-                setVersionName(newVal) {
-                    this.versionName = newVal;
-                },
-                setUserNum(newVal) {
-                    this.userNum = newVal;
-                },
-                generate() {
-                    if (!this.userName) {
-                        alert('Please fill in the user name');
-                        return;
-                    }
-                    if (!this.versionName) {
-                        alert('Please fill in the version number');
-                        return;
-                    }
-                    if (!this.userNum) this.userNum = 1;
-                    let versionNameArr = this.versionName.split('.');
-                    const majorVersion = parseInt(versionNameArr[0]);
-                    const minorVersion = versionNameArr.length === 2 ? (parseInt(versionNameArr[1]) || 0) : 0;
-                    let licenseStr = generateLicense(this.licenseType, this.userName, this.userNum, majorVersion, minorVersion);
-                    this.generateLicenseFile(licenseStr);
-                },
-                generateLicenseFile(licenseStr) {
-                    let zip = new JSZip();
-                    zip.file("Pro.key", licenseStr);
-                    zip.generateAsync({ type: "blob" })
-                        .then(function (content) {
-                            saveAs(content, "Custom.mxtpro");
-                        });
-                }
-            },
-            components: {
-                'my-input': {
-                    template: `<div class="my-input">
-                                    <input :id="idattr" :placeholder="placeholderattr" v-model="value" required/>
-                                    <div :class="validationTipsDiplay" class="my-input-tips-wrap">
-                                        <span class="my-input-tips">{{validationtips}}</span>
-                                        <div class="my-input-arrow"></div>
-                                    </div>
-                                </div>`,
-                    data() {
-                        return {
-                            value: this.valueattr,
-                            validationTipsDiplay: 'hide',
-                            tipsDisplayTimeout: undefined
-                        }
-                    },
-                    props: {
-                        idattr: { type: String, default: '' },
-                        placeholderattr: { type: String, default: '' },
-                        valueattr: '',
-                        validation: { type: String, default: '' },
-                        validationtips: ''
-                    },
-                    watch: {
-                        valueattr(newVal, oldVal) {
-                            this.value = newVal
-                        },
-                        value(newVal, oldVal) {
-                            if (newVal && this.validation) {
-                                let reg = new RegExp(this.validation);
-                                if (!reg.test(newVal)) {
-                                    this.validationTipsDiplay = '';
-                                    this.value = oldVal;
-                                    if (this.tipsDisplayTimeout) clearTimeout(this.tipsDisplayTimeout);
-                                    var _this = this;
-                                    this.tipsDisplayTimeout = setTimeout(function () {
-                                        _this.tipsDisplayTimeout = undefined;
-                                        _this.validationTipsDiplay = 'hide';
-                                    }, 1000);
-                                    return;
-                                }
-                            }
-                            this.$emit('set-data', newVal);
-                        }
-                    }
-                }
+        <div class="box-main w-full max-w-xl mx-auto">
+          <div id="app" class="relative z-10 p-6 sm:p-10 w-full text-left shadow-lg rounded-xl bg-white dark:bg-slate-900/80 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
+            <!-- Header Section -->
+            <header class="mb-8 text-center">
+              <h1 class="relative flex flex-col xs:flex-row items-center justify-center text-4xl sm:text-5xl font-bold text-gray-800 dark:text-white dark:opacity-95 transition-colors">
+                <span>MobaXterm</span>
+                <span class="mt-2 xs:mt-0 xs:ml-2 rounded-xl bg-current p-2 text-[0.7em] leading-none">
+                  <span class="text-white dark:text-black">Keygen</span>
+                </span>
+              </h1>
+              <!-- Version Badge -->
+              <div class="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-sm font-medium text-white"> Compatible with versions 20.X and 25.0 </div>
+              <!-- Theme Toggle -->
+              <div class="mt-4">
+                <button onclick="toggleTheme()" class="px-3 py-1 border border-stone-200 rounded-full drop-shadow-sm text-sm text-stone-800 dark:text-white bg-white/40 dark:bg-black/40 backdrop-blur-lg hover:border-stone-300 transition-colors dark:border-stone-500 dark:hover:border-stone-400"> Toggle Theme </button>
+              </div>
+            </header>
+            <!-- Form Section -->
+            <form>
+              <div class="space-y-6">
+                <div>
+                  <label for="licenseType" class="block text-lg text-gray-700 dark:text-gray-300">Edition:</label>
+                  <select name="licenseType" id="licenseType" v-model="licenseType" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                    <option value="" disabled>Select an option</option>
+                    <option v-for="(val, key) in LICENSE_TYPES" :value="val">{{key}}</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="userName" class="block text-lg text-gray-700 dark:text-gray-300">Username:</label>
+                  <div class="relative">
+                    <input type="text" id="userName" v-model="userName" @input="validateUserName" placeholder="Example defaultUser" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+                  </div>
+                </div>
+                <div>
+                  <label for="versionName" class="block text-lg text-gray-700 dark:text-gray-300">Version:</label>
+                  <div class="relative">
+                    <input type="text" id="versionName" v-model="versionName" @input="validateVersion" placeholder="Example 24.3" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+                  </div>
+                </div>
+                <div>
+                  <label for="userNum" class="block text-lg text-gray-700 dark:text-gray-300">Number of users:</label>
+                  <div class="relative">
+                    <input type="number" id="userNum" v-model="userNum" @input="validateUserNum" placeholder="Example 1" min="1" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+                  </div>
+                </div>
+                <!-- Download Button -->
+                <div class="text-center pt-4">
+                  <button type="button" @click="validateAndGenerate" class="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200"> Download Key </button>
+                </div>
+              </div>
+            </form>
+            <!-- Footer -->
+            <footer class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
+              <div class="flex flex-col items-center space-y-4">
+                <div class="flex items-center space-x-2">
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Created with</span>
+                  <span class="animate-pulse text-red-500">❤</span>
+                  <span class="text-sm text-slate-600 dark:text-slate-400">by</span>
+                  <span class="text-sm font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500"> Zarfala </span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400" style="margin-top: 0;"> UI/UX Design optimized for <span class="inline-block">
+                    <span class="text-blue-500 font-semibold">Computer</span>
+                    <span class="text-green-500 font-semibold">& Mobile</span>
+                  </span>
+                </p>
+                <div class="text-xs text-slate-500 dark:text-slate-500" style="margin-top: 5px;"> v2.0 © 2025 All rights reserved </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <!-- Scripts -->
+      <script src="./js/vue.min-2.6.12.js"></script>
+      <script src="./js/FileSaver.js"></script>
+      <script src="./js/jszip.js"></script>
+      <script src="./js/fire.js"></script>
+      <script src="./js/alert.js"></script>
+      <script type="module">
+        import {
+          LicenseType,
+          generateLicense
+        } from './js/mobaXtermGenerater.js'
+        new Vue({
+          el: '#app',
+          data() {
+            return {
+              LICENSE_TYPES: LicenseType,
+              licenseType: '',
+              userName: '',
+              versionName: '',
+              userNum: '',
+              errors: {
+                userName: '',
+                versionName: '',
+                userNum: ''
+              }
             }
+          },
+          methods: {
+            validateUserName() {
+              const regex = /^[a-zA-Z]+$/;
+              if (!regex.test(this.userName)) {
+                this.errors.userName = 'Only letters can be used';
+                return false;
+              }
+              this.errors.userName = '';
+              return true;
+            },
+            validateVersion() {
+              const regex = /^[1-9][0-9]*\.?\d{0,1}$/;
+              if (!regex.test(this.versionName)) {
+                this.errors.versionName = 'Enter a valid version (e.g., 24.3)';
+                return false;
+              }
+              this.errors.versionName = '';
+              return true;
+            },
+            validateUserNum() {
+              const regex = /^[1-9]+\d*$/;
+              if (!regex.test(this.userNum)) {
+                this.errors.userNum = 'Enter a valid number greater than 0';
+                return false;
+              }
+              this.errors.userNum = '';
+              return true;
+            },
+            validateAndGenerate() {
+              // Validate all fields
+              const isUserNameValid = this.validateUserName();
+              const isVersionValid = this.validateVersion();
+              const isUserNumValid = this.validateUserNum();
+              // Only generate if all validations pass
+              if (isUserNameValid && isVersionValid && isUserNumValid) {
+                let versionNameArr = this.versionName.split('.');
+                const majorVersion = parseInt(versionNameArr[0]);
+                const minorVersion = versionNameArr.length === 2 ? (parseInt(versionNameArr[1]) || 0) : 0;
+                let licenseStr = generateLicense(this.licenseType, this.userName, this.userNum, majorVersion, minorVersion);
+                this.generateLicenseFile(licenseStr);
+              }
+            },
+            generateLicenseFile(licenseStr) {
+              let zip = new JSZip();
+              zip.file("Pro.key", licenseStr);
+              zip.generateAsync({
+                type: "blob"
+              }).then(function(content) {
+                saveAs(content, "Custom.mxtpro");
+              });
+            }
+          },
+          components: {
+            'my-input': {
+              template: `
+								<div class="my-input w-full sm:w-3/4 mx-auto">
+									<input class="w-full p-2 rounded-lg border dark:bg-slate-800 dark:border-slate-600 dark:text-white" :id="idattr" :placeholder="placeholderattr" v-model="value" required/>
+									<div :class="validationTipsDiplay" class="my-input-tips-wrap">
+										<span class="my-input-tips">{{validationtips}}</span>
+										<div class="my-input-arrow"></div>
+									</div>
+								</div>`,
+              data() {
+                return {
+                  value: this.valueattr,
+                  validationTipsDiplay: 'hide',
+                  tipsDisplayTimeout: undefined
+                }
+              },
+              props: {
+                idattr: {
+                  type: String,
+                  default: ''
+                },
+                placeholderattr: {
+                  type: String,
+                  default: ''
+                },
+                valueattr: '',
+                validation: {
+                  type: String,
+                  default: ''
+                },
+                validationtips: ''
+              },
+              watch: {
+                valueattr(newVal, oldVal) {
+                  this.value = newVal
+                },
+                value(newVal, oldVal) {
+                  if (newVal && this.validation) {
+                    let reg = new RegExp(this.validation);
+                    if (!reg.test(newVal)) {
+                      this.validationTipsDiplay = '';
+                      this.value = oldVal;
+                      if (this.tipsDisplayTimeout) clearTimeout(this.tipsDisplayTimeout);
+                      var _this = this;
+                      this.tipsDisplayTimeout = setTimeout(function() {
+                        _this.tipsDisplayTimeout = undefined;
+                        _this.validationTipsDiplay = 'hide';
+                      }, 1000);
+                      return;
+                    }
+                  }
+                  this.$emit('set-data', newVal);
+                }
+              }
+            }
+          }
         });
-    </script>
-
-</body>
-
+      </script>
+  </body>
 </html>
