@@ -2,7 +2,7 @@
 
 ### Overview
 This guide provides easy-to-follow instructions for generating an activation key for MobaXterm, the ultimate terminal emulator for Windows that includes an X11 server, SSH client, and a comprehensive set of network tools. **This method works for any version 20.0 and above**.  
-**Current Version:** 24.3
+**Current Version:** 25.0
 
 ### Prerequisites
 - **Download MobaXterm**: Get MobaXterm from the [official website](https://mobaxterm.mobatek.net/download-home-edition.html).
