@@ -52,7 +52,7 @@
                 </span>
               </h1>
               <!-- Version Badge -->
-              <div class="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-sm font-medium text-white"> Compatible with versions 20.X and 25.0 </div>
+              <div class="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-sm font-medium text-white"> Compatible with versions 20.X and 25.1 </div>
               <!-- Theme Toggle -->
               <div class="mt-4">
                 <button onclick="toggleTheme()" class="px-3 py-1 border border-stone-200 rounded-full drop-shadow-sm text-sm text-stone-800 dark:text-white bg-white/40 dark:bg-black/40 backdrop-blur-lg hover:border-stone-300 transition-colors dark:border-stone-500 dark:hover:border-stone-400"> Toggle Theme </button>
@@ -77,7 +77,7 @@
                 <div>
                   <label for="versionName" class="block text-lg text-gray-700 dark:text-gray-300">Version:</label>
                   <div class="relative">
-                    <input type="text" id="versionName" v-model="versionName" @input="validateVersion" placeholder="Example 24.4" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+                    <input type="text" id="versionName" v-model="versionName" @input="validateVersion" placeholder="Example 25.1" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
                   </div>
                 </div>
                 <div>
@@ -106,7 +106,7 @@
                     <span class="text-green-500 font-semibold">& Mobile</span>
                   </span>
                 </p>
-                <div class="text-xs text-slate-500 dark:text-slate-500" style="margin-top: 5px;"> v2.0 © 2025 All rights reserved </div>
+                <div class="text-xs text-slate-500 dark:text-slate-500" style="margin-top: 5px;"> v2.1 © 2025 All rights reserved </div>
               </div>
             </footer>
           </div>
@@ -152,7 +152,7 @@
             validateVersion() {
               const regex = /^[1-9][0-9]*\.?\d{0,1}$/;
               if (!regex.test(this.versionName)) {
-                this.errors.versionName = 'Enter a valid version (e.g., 24.4)';
+                this.errors.versionName = 'Enter a valid version (e.g., 25.1)';
                 return false;
               }
               this.errors.versionName = '';
