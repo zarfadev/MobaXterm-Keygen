@@ -10,7 +10,7 @@
     <link href="./css/pure-min.css?=2" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     <link href="./css/fire.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -18,12 +18,24 @@
           extend: {
             screens: {
               'xs': '475px',
+            },
+            colors: {
+              primary: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             }
           }
         }
       }
     </script>
-    <!-- Meta tags moved together for better organization -->
+    <!-- Meta tags for better SEO and sharing -->
     <meta property="og:title" content="MobaXterm Keygen" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Website created with love by Zarfala" />
@@ -34,15 +46,15 @@
     <meta name="twitter:description" content="Website created with love by Zarfala">
     <meta name="twitter:image" content="https://i.imgur.com/FtcF9ZP.png">
   </head>
-  <body class="transition-colors">
+  <body class="transition-colors duration-300">
     <main>
-      <div class="relative flex min-h-screen flex-col items-center justify-center bg-white dark:bg-black transition-colors overflow-hidden px-4">
+      <div class="relative flex min-h-screen flex-col items-center justify-center bg-white dark:bg-black transition-colors duration-300 overflow-hidden px-4">
         <!-- Background effect -->
         <div class="flex inset-0 overflow-hidden">
           <div class="jumbo absolute opacity-60"></div>
         </div>
         <div class="box-main w-full max-w-xl mx-auto">
-          <div id="app" class="relative z-10 p-6 sm:p-10 w-full text-left shadow-lg rounded-xl bg-white dark:bg-slate-900/80 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
+          <div id="app" class="relative z-10 p-6 sm:p-10 w-full text-left shadow-lg rounded-xl bg-white dark:bg-slate-900/80 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 transition-all duration-300">
             <!-- Header Section -->
             <header class="mb-8 text-center">
               <h1 class="relative flex flex-col xs:flex-row items-center justify-center text-4xl sm:text-5xl font-bold text-gray-800 dark:text-white dark:opacity-95 transition-colors">
@@ -52,43 +64,47 @@
                 </span>
               </h1>
               <!-- Version Badge -->
-              <div class="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-sm font-medium text-white"> Compatible with versions 20.X and 25.1 </div>
+              <div class="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-sm font-medium text-white"> Compatible with versions 20.X, 25.1 and 25.2 </div>
               <!-- Theme Toggle -->
               <div class="mt-4">
                 <button onclick="toggleTheme()" class="px-3 py-1 border border-stone-200 rounded-full drop-shadow-sm text-sm text-stone-800 dark:text-white bg-white/40 dark:bg-black/40 backdrop-blur-lg hover:border-stone-300 transition-colors dark:border-stone-500 dark:hover:border-stone-400"> Toggle Theme </button>
               </div>
             </header>
             <!-- Form Section -->
-            <form>
+            <form @submit.prevent="validateAndGenerate">
               <div class="space-y-6">
                 <div>
                   <label for="licenseType" class="block text-lg text-gray-700 dark:text-gray-300">Edition:</label>
-                  <select name="licenseType" id="licenseType" v-model="licenseType" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                  <select name="licenseType" id="licenseType" v-model="licenseType" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-colors">
                     <option value="" disabled>Select an option</option>
                     <option v-for="(val, key) in LICENSE_TYPES" :value="val">{{key}}</option>
                   </select>
+                  <p v-if="errors.licenseType" class="mt-1 text-red-500 text-sm">{{ errors.licenseType }}</p>
                 </div>
                 <div>
                   <label for="userName" class="block text-lg text-gray-700 dark:text-gray-300">Username:</label>
                   <div class="relative">
-                    <input type="text" id="userName" v-model="userName" @input="validateUserName" placeholder="Example defaultUser" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+                    <input type="text" id="userName" v-model="userName" @input="validateUserName" placeholder="Example defaultUser" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-colors" />
+                    <p v-if="errors.userName" class="mt-1 text-red-500 text-sm">{{ errors.userName }}</p>
                   </div>
                 </div>
                 <div>
                   <label for="versionName" class="block text-lg text-gray-700 dark:text-gray-300">Version:</label>
                   <div class="relative">
-                    <input type="text" id="versionName" v-model="versionName" @input="validateVersion" placeholder="Example 25.1" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+                    <input type="text" id="versionName" v-model="versionName" @input="validateVersion" placeholder="Example 25.2" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-colors" />
+                    <p v-if="errors.versionName" class="mt-1 text-red-500 text-sm">{{ errors.versionName }}</p>
                   </div>
                 </div>
                 <div>
                   <label for="userNum" class="block text-lg text-gray-700 dark:text-gray-300">Number of users:</label>
                   <div class="relative">
-                    <input type="number" id="userNum" v-model="userNum" @input="validateUserNum" placeholder="Example 1" min="1" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+                    <input type="number" id="userNum" v-model="userNum" @input="validateUserNum" placeholder="Example 1" min="1" class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-colors" />
+                    <p v-if="errors.userNum" class="mt-1 text-red-500 text-sm">{{ errors.userNum }}</p>
                   </div>
                 </div>
                 <!-- Download Button -->
                 <div class="text-center pt-4">
-                  <button type="button" @click="validateAndGenerate" class="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200"> Download Key </button>
+                  <button type="submit" class="w-full sm:w-auto px-6 py-3 bg-primary-600 text-white rounded-lg shadow-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors duration-200"> Download Key </button>
                 </div>
               </div>
             </form>
@@ -106,11 +122,15 @@
                     <span class="text-green-500 font-semibold">& Mobile</span>
                   </span>
                 </p>
-                <div class="text-xs text-slate-500 dark:text-slate-500" style="margin-top: 5px;"> v2.1 © 2025 All rights reserved </div>
+                <div class="text-xs text-slate-500 dark:text-slate-500" style="margin-top: 5px;"> v2.2 © 2025 All rights reserved </div>
               </div>
             </footer>
           </div>
         </div>
+      </div>
+      <!-- Toast notification -->
+      <div id="toast" class="fixed bottom-4 right-4 px-4 py-2 rounded-lg bg-green-500 text-white transform translate-y-16 opacity-0 transition-all duration-300 z-50 hidden">
+        License generated successfully!
       </div>
       <!-- Scripts -->
       <script src="./js/vue.min-2.6.12.js"></script>
@@ -118,11 +138,57 @@
       <script src="./js/jszip.js"></script>
       <script src="./js/fire.js"></script>
       <script src="./js/alert.js"></script>
+      <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+          if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+          } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+          }
+        }
+        
+        // Check for saved theme preference or prefer-color-scheme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        
+        // Toast notification function
+        function showToast(message, type = 'success') {
+          const toast = document.getElementById('toast');
+          toast.textContent = message;
+          toast.classList.remove('hidden');
+          
+          if (type === 'success') {
+            toast.classList.add('bg-green-500');
+            toast.classList.remove('bg-red-500');
+          } else {
+            toast.classList.add('bg-red-500');
+            toast.classList.remove('bg-green-500');
+          }
+          
+          setTimeout(() => {
+            toast.classList.remove('translate-y-16', 'opacity-0');
+          }, 100);
+          
+          setTimeout(() => {
+            toast.classList.add('translate-y-16', 'opacity-0');
+            setTimeout(() => {
+              toast.classList.add('hidden');
+            }, 300);
+          }, 3000);
+        }
+      </script>
       <script type="module">
         import {
           LicenseType,
           generateLicense
         } from './js/mobaXtermGenerater.js'
+        
         new Vue({
           el: '#app',
           data() {
@@ -133,6 +199,7 @@
               versionName: '',
               userNum: '',
               errors: {
+                licenseType: '',
                 userName: '',
                 versionName: '',
                 userNum: ''
@@ -140,25 +207,56 @@
             }
           },
           methods: {
+            validateLicenseType() {
+              if (!this.licenseType) {
+                this.errors.licenseType = 'Please select an edition';
+                return false;
+              }
+              this.errors.licenseType = '';
+              return true;
+            },
             validateUserName() {
+              if (!this.userName) {
+                this.errors.userName = 'Username is required';
+                return false;
+              }
+              
               const regex = /^[a-zA-Z]+$/;
               if (!regex.test(this.userName)) {
-                this.errors.userName = 'Only letters can be used';
+                this.errors.userName = 'Only letters are allowed (no spaces, numbers or special characters)';
                 return false;
               }
               this.errors.userName = '';
               return true;
             },
             validateVersion() {
-              const regex = /^[1-9][0-9]*\.?\d{0,1}$/;
-              if (!regex.test(this.versionName)) {
-                this.errors.versionName = 'Enter a valid version (e.g., 25.1)';
+              if (!this.versionName) {
+                this.errors.versionName = 'Version is required';
                 return false;
               }
+              
+              const regex = /^[1-9][0-9]*\.?\d{0,1}$/;
+              if (!regex.test(this.versionName)) {
+                this.errors.versionName = 'Enter a valid version format (e.g., 25.2)';
+                return false;
+              }
+              
+              // Check if version is supported
+              const majorVersion = parseInt(this.versionName.split('.')[0]);
+              if (majorVersion !== 20 && majorVersion !== 25) {
+                this.errors.versionName = 'Currently only versions 20.X and 25.X are supported';
+                return false;
+              }
+              
               this.errors.versionName = '';
               return true;
             },
             validateUserNum() {
+              if (!this.userNum) {
+                this.errors.userNum = 'Number of users is required';
+                return false;
+              }
+              
               const regex = /^[1-9]+\d*$/;
               if (!regex.test(this.userNum)) {
                 this.errors.userNum = 'Enter a valid number greater than 0';
@@ -169,16 +267,25 @@
             },
             validateAndGenerate() {
               // Validate all fields
+              const isLicenseTypeValid = this.validateLicenseType();
               const isUserNameValid = this.validateUserName();
               const isVersionValid = this.validateVersion();
               const isUserNumValid = this.validateUserNum();
+              
               // Only generate if all validations pass
-              if (isUserNameValid && isVersionValid && isUserNumValid) {
-                let versionNameArr = this.versionName.split('.');
-                const majorVersion = parseInt(versionNameArr[0]);
-                const minorVersion = versionNameArr.length === 2 ? (parseInt(versionNameArr[1]) || 0) : 0;
-                let licenseStr = generateLicense(this.licenseType, this.userName, this.userNum, majorVersion, minorVersion);
-                this.generateLicenseFile(licenseStr);
+              if (isLicenseTypeValid && isUserNameValid && isVersionValid && isUserNumValid) {
+                try {
+                  let versionNameArr = this.versionName.split('.');
+                  const majorVersion = parseInt(versionNameArr[0]);
+                  const minorVersion = versionNameArr.length === 2 ? (parseInt(versionNameArr[1]) || 0) : 0;
+                  
+                  let licenseStr = generateLicense(this.licenseType, this.userName, this.userNum, majorVersion, minorVersion);
+                  this.generateLicenseFile(licenseStr);
+                  showToast('License generated successfully!', 'success');
+                } catch (error) {
+                  console.error('Error generating license:', error);
+                  showToast('Error generating license. Please try again.', 'error');
+                }
               }
             },
             generateLicenseFile(licenseStr) {
@@ -188,65 +295,15 @@
                 type: "blob"
               }).then(function(content) {
                 saveAs(content, "Custom.mxtpro");
+              }).catch(function(error) {
+                console.error('Error creating zip file:', error);
+                showToast('Error creating license file. Please try again.', 'error');
               });
             }
           },
-          components: {
-            'my-input': {
-              template: `
-								<div class="my-input w-full sm:w-3/4 mx-auto">
-									<input class="w-full p-2 rounded-lg border dark:bg-slate-800 dark:border-slate-600 dark:text-white" :id="idattr" :placeholder="placeholderattr" v-model="value" required/>
-									<div :class="validationTipsDiplay" class="my-input-tips-wrap">
-										<span class="my-input-tips">{{validationtips}}</span>
-										<div class="my-input-arrow"></div>
-									</div>
-								</div>`,
-              data() {
-                return {
-                  value: this.valueattr,
-                  validationTipsDiplay: 'hide',
-                  tipsDisplayTimeout: undefined
-                }
-              },
-              props: {
-                idattr: {
-                  type: String,
-                  default: ''
-                },
-                placeholderattr: {
-                  type: String,
-                  default: ''
-                },
-                valueattr: '',
-                validation: {
-                  type: String,
-                  default: ''
-                },
-                validationtips: ''
-              },
-              watch: {
-                valueattr(newVal, oldVal) {
-                  this.value = newVal
-                },
-                value(newVal, oldVal) {
-                  if (newVal && this.validation) {
-                    let reg = new RegExp(this.validation);
-                    if (!reg.test(newVal)) {
-                      this.validationTipsDiplay = '';
-                      this.value = oldVal;
-                      if (this.tipsDisplayTimeout) clearTimeout(this.tipsDisplayTimeout);
-                      var _this = this;
-                      this.tipsDisplayTimeout = setTimeout(function() {
-                        _this.tipsDisplayTimeout = undefined;
-                        _this.validationTipsDiplay = 'hide';
-                      }, 1000);
-                      return;
-                    }
-                  }
-                  this.$emit('set-data', newVal);
-                }
-              }
-            }
+          mounted() {
+            // Set default version to 25.2
+            this.versionName = '25.2';
           }
         });
       </script>
