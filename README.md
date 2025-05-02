@@ -11,7 +11,7 @@ This guide provides easy-to-follow instructions for generating an activation key
 
 1. **Generate Activation File**: Go to the [MobaXterm Key Generator](https://moba-xterm-keygen.vercel.app/) and generate your activation file in seconds.
 
-   ![MobaXterm Key Generator Example](https://dxxocvnonqe7r.cloudfront.net/uploads/files/db20cdeb804953e627d6cb3c414859cb.png)
+   ![MobaXterm Key Generator Example](https://d2bgqtsoaxm8w0.cloudfront.net/uploads/files/db20cdeb804953e627d6cb3c414859cb.png)
    
 2. **Integration**: Place the generated activation file into the MobaXterm directory:
    - **Default Path**: `C:\Program Files (x86)\Mobatek\MobaXterm`
