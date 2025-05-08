@@ -54,6 +54,16 @@ Use our [online generator](https://moba-xterm-keygen.vercel.app/) to create your
 2. Copy the `Custom.mxtpro` file to this directory
 3. Start MobaXterm - your license should now be activated!
 
+### Step 4: Postscript (Optional)
+
+The file generated, Custom.mxtpro, is actually a zip file and contains a text file, Pro.key, where there is a key string.
+
+MobaXterm.exe has another mode. You can see it by adding a parameter "-customizer".
+
+$ .\MobaXterm.exe -customizer
+
+You should export custom settings to a file named MobaXterm customization.custom which is also a zip file. Then merge two zip file: Custom.mxtpro and MobaXterm customization.custom to Custom.mxtpro. Finally copy newly-generated Custom.mxtpro to MobaXterm's installation path.
+
 ## Troubleshooting
 
 1. **Activation Not Working?**
