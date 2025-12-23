@@ -24,7 +24,7 @@ A modern, user-friendly web tool for generating activation keys and customizing 
 
 ## Compatibility
 
-- Works with **MobaXterm versions 20.X, 25.2, and 25.3**
+- Works with **MobaXterm versions 20.X, 25.3, and 25.4**
 - Supports both portable and installer editions
 
 ## How to Use
@@ -96,7 +96,7 @@ This official tool also allows you to export your settings to a file named "Moba
 ## Troubleshooting
 
 1. **Activation Not Working?**
-   - Verify you're using a compatible version (20.X, 25.2, or 25.3)
+   - Verify you're using a compatible version (20.X, 25.3, or 25.4)
    - Make sure the file is in the correct location
    - Check that the file is named exactly `Custom.mxtpro`
 
@@ -126,6 +126,7 @@ This tool is provided for educational purposes only. Please support the develope
 - Modern JavaScript
 
 ### Version History
+- **v2.6** - Added support for version 25.4
 - **v2.5** - Added support for version 25.3
 - **v2.4** - Added full MobaXterm customizer functionality
 - **v2.3** - Added custom settings merger
