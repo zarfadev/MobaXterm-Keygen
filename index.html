@@ -395,14 +395,7 @@
                 this.errors.versionName = 'Enter a valid version format (e.g., 25.4)';
                 return false;
               }
-              
-              // Check if version is supported
-              const majorVersion = parseInt(this.versionName.split('.')[0]);
-              if (majorVersion !== 20 && majorVersion !== 25) {
-                this.errors.versionName = 'Currently only versions 20.X and 25.X are supported';
-                return false;
-              }
-              
+                            
               this.errors.versionName = '';
               return true;
             },
