@@ -398,8 +398,8 @@
               
               // Check if version is supported
               const majorVersion = parseInt(this.versionName.split('.')[0]);
-              if (majorVersion !== 20 && majorVersion !== 25) {
-                this.errors.versionName = 'Currently only versions 20.X and 25.X are supported';
+              if (majorVersion !== 20 && majorVersion !== 25 && majorVersion !==26) {
+                this.errors.versionName = 'Currently only versions 20.X, 25.X and 26 are supported';
                 return false;
               }
               
