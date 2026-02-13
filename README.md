@@ -1,8 +1,8 @@
 # MobaXterm Keygen & Customizer 🚀
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Version](https://img.shields.io/badge/Version-v2.6-green.svg)
-![Compatibility](https://img.shields.io/badge/Compatible-v20.X%20|%20v25.3%20|%20v25.4-orange)
+![Version](https://img.shields.io/badge/Version-v2.7-green.svg)
+![Compatibility](https://img.shields.io/badge/Compatible-v20.X%20|%20v25.4%20|%20v26.0-orange)
 
 > ⭐ **Please star this repository if you find it helpful!** ⭐
 
@@ -24,7 +24,7 @@ A modern, user-friendly web tool for generating activation keys and customizing 
 
 ## Compatibility
 
-- Works with **MobaXterm versions 20.X, 25.3, and 25.4**
+- Works with **MobaXterm versions 20.X, 25.4, and 26.0**
 - Supports both portable and installer editions
 
 ## How to Use
@@ -35,7 +35,7 @@ A modern, user-friendly web tool for generating activation keys and customizing 
 2. **Fill in the Form**:
    - Select the desired MobaXterm edition
    - Enter a username (letters only)
-   - Choose your MobaXterm version (20.X or 25.X)
+   - Choose your MobaXterm version (20.X or 26.X)
    - Specify the number of users
 3. **Download**: Click "Download Key" to get your Custom.mxtpro file
 4. **Activate**: Place the generated file in your MobaXterm installation directory:
@@ -96,7 +96,7 @@ This official tool also allows you to export your settings to a file named "Moba
 ## Troubleshooting
 
 1. **Activation Not Working?**
-   - Verify you're using a compatible version (20.X, 25.3, or 25.4)
+   - Verify you're using a compatible version (20.X, 25.4, or 26.0)
    - Make sure the file is in the correct location
    - Check that the file is named exactly `Custom.mxtpro`
 
@@ -126,6 +126,7 @@ This tool is provided for educational purposes only. Please support the develope
 - Modern JavaScript
 
 ### Version History
+- **v2.7** - Added support for version 26,0
 - **v2.6** - Added support for version 25.4
 - **v2.5** - Added support for version 25.3
 - **v2.4** - Added full MobaXterm customizer functionality
