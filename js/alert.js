@@ -1,40 +1,70 @@
-var estiloConsola = `
-font-size: 16px;
-font-family: "Courier New", monospace;
-color: red;
-white-space: pre;
+const asciiArt = `
+ @@@@@@@@   @@@@@@   @@@@@@@   @@@@@@@@   @@@@@@   @@@        @@@@@@ 
+ @@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@@  @@@       @@@@@@@@
+      @@!  @@!  @@@  @@!  @@@  @@!       @@!  @@@  @@!       @@!  @@@
+     !@!   !@!  @!@  !@!  @!@  !@!       !@!  @!@  !@!       !@!  @!@
+    @!!    @!@!@!@!  @!@!!@!   @!!!:!    @!@!@!@!  @!!       @!@!@!@!
+   !!!     !!!@!!!!  !!@!@!    !!!!!:    !!!@!!!!  !!!       !!!@!!!!
+  !!:      !!:  !!!  !!: :!!   !!:       !!:  !!!  !!:       !!:  !!!
+ :!:       :!:  !:!  :!:  !:!  :!:       :!:  !:!   :!:      :!:  !:!
+  :: ::::  ::   :::  ::   :::   ::       ::   :::   :: ::::  ::   :::
+ : :: : :   :   : :   :   : :   :         :   : :  : :: : :   :   : :
 `;
 
-var estiloZarfala = `
-color: red;
-white-space: pre;
+const asciiAuraStyle = `
+  font-family: "Courier New", monospace;
+  font-weight: 900;
+  background: linear-gradient(90deg, #60a5fa, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: block;
+  white-space: pre;
 `;
 
-var mensajeZarfala = `
-@@@@@@@@   @@@@@@   @@@@@@@   @@@@@@@@   @@@@@@   @@@        @@@@@@ 
-@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@@  @@@       @@@@@@@@
-     @@!  @@!  @@@  @@!  @@@  @@!       @@!  @@@  @@!       @@!  @@@
-    !@!   !@!  @!@  !@!  @!@  !@!       !@!  @!@  !@!       !@!  @!@
-   @!!    @!@!@!@!  @!@!!@!   @!!!:!    @!@!@!@!  @!!       @!@!@!@!
-  !!!     !!!@!!!!  !!@!@!    !!!!!:    !!!@!!!!  !!!       !!!@!!!!
- !!:      !!:  !!!  !!: :!!   !!:       !!:  !!!  !!:       !!:  !!!
-:!:       :!:  !:!  :!:  !:!  :!:       :!:  !:!   :!:      :!:  !:!
- :: ::::  ::   :::  ::   :::   ::       ::   :::   :: ::::  ::   :::
-: :: : :   :   : :   :   : :   :         :   : :  : :: : :   :   : :
+const warningHeadingStyle = `
+  color: #ff0055;
+  font-size: 44px;
+  font-weight: 900;
+  font-family: 'Outfit', sans-serif, system-ui;
+  text-shadow: 0px 4px 15px rgba(255, 0, 85, 0.4);
+  padding: 10px 0;
 `;
 
-function mostrarMensaje() {
+const warningBodyStyle = `
+  font-size: 16px;
+  color: #d1d5db;
+  font-weight: 500;
+  line-height: 1.6;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 10px 0 20px 0;
+`;
+
+const signatureStyle = `
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Outfit', sans-serif;
+`;
+
+function renderSecureAura() {
+  // Clear any existing logs to present a clean canvas
   console.clear();
-  console.log('%c' + mensajeZarfala, estiloZarfala);
-  console.log("%cSTOP!", "color:red;font-size:xx-large;font-weight:bold;"),
-      console.log(`%cThis is a browser feature intended for developers. Do not enter or paste code which you don't understand. It may allow attackers to steal your information or impersonate you. See https://en.wikipedia.org/wiki/Self-XSS for more details`, "font-size:large;"),
-      localStorage.do_NOT_share_jwt || localStorage.setItem("do_NOT_share_jwt", "do NOT share the JWT value. someone could steal your account");
+
+  // Print Aura-style ASCII Art
+  console.log('%c' + asciiArt, asciiAuraStyle);
+
+  // Print Warning Message
+  console.log("%cSTOP! SECURE ZONE", warningHeadingStyle);
+  
+  console.log(
+    "%cThis is a browser feature intended strictly for developers.\nDo not enter or paste any code you do not fully understand.\nDoing so could grant attackers access to hijack your session, steal your licenses, or impersonate you.\n\nProtect your data and stay safe! 🔒", 
+    warningBodyStyle
+  );
+
+  console.log("%c✨ MobaXterm Keygen System - Shield Active", signatureStyle);
 }
 
-var intermitente = true;
-setInterval(function () {
-  mostrarMensaje();
-  intermitente = !intermitente;
-}, 1000);
-
-mostrarMensaje();
+// Render the protective aura once
+renderSecureAura();

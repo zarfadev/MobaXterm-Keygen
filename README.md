@@ -1,145 +1,98 @@
-# MobaXterm Keygen & Customizer 🚀
+<div align="center">
+  <img src="https://i.imgur.com/FtcF9ZP.png" alt="MobaXterm Keygen Logo" width="120" />
+  <h1>MobaXterm Keygen & Customizer 🚀</h1>
+  <p><strong>Fast, and secure license generator and customizer.</strong></p>
+  
+  <p>
+    <a href="#"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License" /></a>
+    <a href="#"><img src="https://img.shields.io/badge/Version-v3.0-green.svg?style=for-the-badge" alt="Version" /></a>
+    <a href="#"><img src="https://img.shields.io/badge/Compatible-v20.X%20|%20v26.2%20|%20v26.3-orange?style=for-the-badge" alt="Compatibility" /></a>
+  </p>
+  
+  <p><em>⭐ Please star this repository if you find it helpful! ⭐</em></p>
+</div>
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Version](https://img.shields.io/badge/Version-v2.7-green.svg)
-![Compatibility](https://img.shields.io/badge/Compatible-v20.X%20|%20v25.4%20|%20v26.0-orange)
+---
 
-> ⭐ **Please star this repository if you find it helpful!** ⭐
+## 🔥 Overview
 
-## Overview
+A modern, user-friendly, and beautifully designed web tool for generating activation keys and customizing **MobaXterm**—the ultimate terminal emulator for Windows with an integrated X11 server, SSH client, and comprehensive network toolset.
 
-A modern, user-friendly web tool for generating activation keys and customizing MobaXterm, the ultimate terminal emulator for Windows with an integrated X11 server, SSH client, and comprehensive network toolset.
+All processes run **100% locally** in your browser, ensuring maximum privacy and security.
 
-## Features
+## ✨ Key Features
 
-- **✨ Clean, Modern UI** - Responsive design optimized for both desktop and mobile
-- **🌓 Dark/Light Mode** - Toggle between themes with a click
-- **🔒 Multiple Editions Support** - Generate keys for different MobaXterm editions
-- **👥 Custom User Count** - Specify the number of concurrent users
-- **💾 One-Click Downloads** - Instantly download your custom activation file
-- **🔧 Complete Customizer** - Create personalized settings without the official customizer tool
-- **🖼️ Custom Logo Support** - Replace the default MobaXterm logo with your own
-- **📑 Bookmarks Manager** - Pre-define SSH, FTP, and other connection profiles
-- **🔌 Plugin Integration** - Include plugins in your custom configuration
+- **💎 Premium Glassmorphism UI** - Enjoy a sleek, modern, and completely responsive experience.
+- **🌓 Adaptive Theme** - Seamless dark and light mode toggle.
+- **🔒 Multi-Edition Support** - Generate licenses for various MobaXterm editions effortlessly.
+- **👥 Flexible User Allocation** - Define your own custom concurrent user limit.
+- **💾 One-Click Downloads** - Get your `.mxtpro` files instantly in a neat package.
+- **🔧 Built-in Customizer Integration** - No need for the official cli tool; apply advanced setups visually.
+- **🖼️ Brand Personalization** - Easily switch the default MobaXterm logo with your company's own.
+- **🔌 Plugins & Bookmarks** - Embed `.mxt3` plugins and predefined SSH/FTP profiles instantly.
 
-## Compatibility
+## 🚀 Compatibility
 
-- Works with **MobaXterm versions 20.X, 25.4, and 26.0**
-- Supports both portable and installer editions
+- Official support tested extensively with MobaXterm versions **20.X, 26.2, and 26.3**.
+- Compatible with both **Portable** and **Installer (Desktop)** editions.
 
-## How to Use
+## 📖 How to Use
 
-### Key Generator
+### 1️⃣ The Key Generator
 
-1. **Visit the Generator**: Go to the [MobaXterm Key Generator](https://moba-xterm-keygen.vercel.app/)
-2. **Fill in the Form**:
-   - Select the desired MobaXterm edition
-   - Enter a username (letters only)
-   - Choose your MobaXterm version (20.X or 26.X)
-   - Specify the number of users
-3. **Download**: Click "Download Key" to get your Custom.mxtpro file
-4. **Activate**: Place the generated file in your MobaXterm installation directory:
-   ```
+1. **Access the Generator**: Open the [MobaXterm Key Generator](https://moba-xterm-keygen.vercel.app/) web application.
+2. **Setup your License**:
+   - Choose your preferred MobaXterm Edition from the dropdown.
+   - Enter your username (alphabetical characters only).
+   - Input your current target version (e.g., `26.3`).
+   - Define your desired number of users.
+3. **Generate**: Click the big **"Generate License"** button to start downloading your `Custom.mxtpro` key.
+4. **Deploy**: Drop this file inside your MobaXterm installation folder:
+   ```text
    C:\Program Files (x86)\Mobatek\MobaXterm
    ```
 
-### Customizer
+### 2️⃣ Advanced: Settings Merger
 
-1. **Go to the Customizer Tab** in the web interface
-2. **Configure Your Settings**:
-   - **Banner**: Create a personalized welcome message
-   - **Profile**: Configure a custom bash profile (similar to /etc/profile in Linux)
-   - **Settings**: Toggle MobaXterm features on/off
-   - **Logo**: Upload your custom logo image
-   - **Bookmarks**: Create predefined connections for your users
-   - **Plugins**: Add optional MobaXterm plugins (.mxt3 files)
-3. **Generate Settings**: Click "Generate Configuration File" to download your settings
-4. **Apply Settings**: Use either method below to apply your customization
+If you have personalized MobaXterm preferences (Customizer tweaks, logos, bash profiles):
 
-### Settings Merger
+1. Switch to the **Settings Merger** tab inside our web app.
+2. **Export your settings**: Run `.\MobaXterm.exe -customizer` and select the option to export to `MobaXterm customization.custom`.
+3. **Upload both files**:
+   - The license key file (`Custom.mxtpro`).
+   - The exported configuration file (`MobaXterm customization.custom`).
+4. Click **Merge Files** to inject everything into a single, unified `Custom.mxtpro` file to deploy normally.
 
-1. **Go to the Custom Settings Merger Tab**
-2. **Upload Files**:
-   - Your license key file (Custom.mxtpro)
-   - Your customization file (MobaXterm customization.custom)
-3. **Merge**: Create a single file with both your license and custom settings
-4. **Deploy**: Copy the merged Custom.mxtpro to your MobaXterm installation directory
+## 🛠 Troubleshooting
 
-## Installation Guide
+<details>
+<summary><strong>Activation isn't being recognized?</strong></summary>
+Ensure you are running a supported version range (v20.X, 26.2, or 26.3). Also, make sure the file is strictly named `Custom.mxtpro` without any duplicates like `Custom (1).mxtpro`.
+</details>
 
-### Step 1: Download MobaXterm
-Download the latest version from the [official MobaXterm website](https://mobaxterm.mobatek.net/download-home-edition.html).
+<details>
+<summary><strong>File generation fails?</strong></summary>
+Double check that your provided username only encompasses letters. Spaces and unique symbols are currently not supported by the underlying cryptography validation checks.
+</details>
 
-### Step 2: Generate Your Key & Customization
-Use our tool to:
-1. Create your activation key
-2. Customize your settings (optional)
-3. Merge your license with your customization (optional)
+## 🔐 Technical & Security Details
 
-### Step 3: Activate MobaXterm
-1. Locate your MobaXterm installation folder:
-   - **Default Path**: `C:\Program Files (x86)\Mobatek\MobaXterm`
-   - Or right-click the MobaXterm shortcut and select "Open file location"
-2. Copy the `Custom.mxtpro` file to this directory
-3. Start MobaXterm - your license and customizations should now be applied!
+This tool operates completely **Client-Side** leveraging `Vue.js` and pure DOM manipulations. **Not a single byte of your data or generated licenses travels to any backend server.**
 
-### Alternative Customization Method
+> **Disclaimer:** This project is provided exclusively for educational concepts and reverse-engineering study cases. For commercial environments, please consider supporting the official developers by purchasing an enterprise license.
 
-MobaXterm.exe has a customizer mode that you can access by adding the parameter "-customizer":
+## 📈 Version History
 
-```
-.\MobaXterm.exe -customizer
-```
-
-This official tool also allows you to export your settings to a file named "MobaXterm customization.custom". Our web-based customizer provides similar functionality but is accessible directly in your browser.
-
-## Troubleshooting
-
-1. **Activation Not Working?**
-   - Verify you're using a compatible version (20.X, 25.4, or 26.0)
-   - Make sure the file is in the correct location
-   - Check that the file is named exactly `Custom.mxtpro`
-
-2. **Error During Key Generation?**
-   - Ensure all form fields are filled correctly
-   - Username must contain only letters (no spaces, numbers, or special characters)
-   - Try refreshing the page and generating again
-
-3. **Customization Not Applying?**
-   - Verify that you've merged the customization with your license file
-   - Make sure the merged file is named exactly `Custom.mxtpro`
-   - Try restarting MobaXterm after placing the file in the installation directory
-
-## Technical Details
-
-This tool uses client-side processing to generate valid license keys and customization files based on your inputs. Everything is generated directly in your browser - no data is sent to any server, ensuring your privacy and security.
-
-## Disclaimer
-
-This tool is provided for educational purposes only. Please support the developers by purchasing a license for commercial use.
-
-## Development
-
-### Built With
-- Vue.js
-- Tailwind CSS
-- Modern JavaScript
-
-### Version History
-- **v2.7** - Added support for version 26,0
+- **v3.0** - Refined UI using a completely reconstructed Glassmorphism aesthetic and modern UX updates. Updated support for up to `26.3`.
+- **v2.7** - Added support for version 26.0
 - **v2.6** - Added support for version 25.4
 - **v2.5** - Added support for version 25.3
-- **v2.4** - Added full MobaXterm customizer functionality
-- **v2.3** - Added custom settings merger
-- **v2.2** - Dark mode and mobile optimization
-- **v2.1** - Added support for version 25.2
+- **v2.4** - Brought full MobaXterm customizer functionality
 - **v2.0** - Major UI redesign
-- **v1.0** - Initial release
 
 ---
 
-Created with ❤️ by Zarfala
-
----
-
-⭐ [Star this repository on GitHub!](https://github.com/zarfadev/MobaXterm-Keygen) ⭐
+<div align="center">
+  <strong>Crafted with ❤️ by Zarfala</strong><br>
+  <a href="https://github.com/zarfadev/MobaXterm-Keygen">⭐ Star us on GitHub</a>
+</div>
