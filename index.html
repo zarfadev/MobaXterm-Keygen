@@ -337,7 +337,7 @@
                   class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
               </span>
-              <span>v20.X, 26.2 & 26.3 Compatible</span>
+              <span>v20.X, 26.4 & 26.5 Compatible</span>
             </div>
 
             <!-- Main Title -->
@@ -453,7 +453,7 @@
                       </svg>
                     </div>
                     <input type="text" id="versionName" v-model="versionName" @input="validateVersion"
-                      placeholder="26.3" class="input-modern block w-full pl-11 pr-4 py-3.5 rounded-xl outline-none" />
+                      placeholder="26.5" class="input-modern block w-full pl-11 pr-4 py-3.5 rounded-xl outline-none" />
                   </div>
                   <p v-if="errors.versionName" class="mt-1.5 ml-1 text-red-500 text-xs font-medium">{{
                     errors.versionName }}</p>
@@ -723,7 +723,7 @@
           LICENSE_TYPES: LicenseType,
           licenseType: '',
           userName: '',
-          versionName: '26.3',
+          versionName: '26.5',
           userNum: '',
           activeTab: 'keyGenerator',
           licenseFile: null,
@@ -767,7 +767,7 @@
           }
           const regex = /^[1-9][0-9]*\.?\d{0,1}$/;
           if (!regex.test(this.versionName)) {
-            this.errors.versionName = 'Enter a valid version format (e.g., 26.3)';
+            this.errors.versionName = 'Enter a valid version format (e.g., 26.5)';
             return false;
           }
           // Check if version is supported
